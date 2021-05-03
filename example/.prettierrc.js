@@ -1,4 +1,4 @@
-const prettier = require('@byteflowjs/prettier');
+const prettier = require('@byteflowjs/rcpack/prettier');
 
 module.exports = {
   ...prettier,

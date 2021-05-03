@@ -15,7 +15,7 @@ In your `.eslintrc.js` file, write:
 
 ```js
 module.exports = {
-  extends: [require.resolve('@byteflowjs/eslint')],
+  extends: [require.resolve('@byteflowjs/rcpack/eslint')],
   rules: {
     // Your rules here
   },
@@ -25,7 +25,7 @@ module.exports = {
 In your `.prettierrc.js` file, write:
 
 ```js
-const prettier = require('@byteflowjs/prettier');
+const prettier = require('@byteflowjs/rcpack/prettier');
 
 module.exports = {
   ...prettier,
