@@ -43,6 +43,8 @@ Then, in root directory, create a `.vscode` folder. Inside, create a `settings.j
 }
 ```
 
+We need to reload VSCode to so ESLint and Prettier extensions take effort. `cmd+shift+p` and type `reload window`. 
+
 Now, on file save, VSCode will automatically format your code and lint errors.
 
 Additionally, checkout `examples/package.json` to see how to format & lint your code prior to pushing your code to repository.
