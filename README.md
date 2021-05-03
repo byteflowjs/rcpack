@@ -34,7 +34,7 @@ module.exports = {
 ```
 
 To achieve `format on-save` in VSCode. Make sure you have the VSCode extensions *ESLint* and *Prettier* installed.
-In root directory, create a `.vscode` folder. Inside, create a file `settings.json`. Write:
+Then, in root directory, create a `.vscode` folder. Inside, create a `settings.json` file. Write:
 ```js
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
