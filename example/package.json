@@ -1,0 +1,71 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll",
+    "lint": "npm run lint:format && npm run lint:errors",
+    "lint:format": "prettier --loglevel warn --write \"src/**/*.{js,jsx,css,scss,less,html,md,json}\"",
+    "lint:errors": "eslint --ext .js,.jsx --format=pretty ./src"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run test"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/eslint-parser": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/preset-react": "^7.13.13",
+    
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-formatter-pretty": "^4.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+
+    "husky": "^4.3.0",
+    "jest": "^26.6.3",
+    "prettier": "2.2.1"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          "@babel/preset-env",
+          "@babel/preset-react"
+        ]
+      }
+    }
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "jest": {
+    "verbose": true,
+    "testMatch": [
+      "**/__tests__/**/*.{js,jsx,ts,tsx}",
+      "**/*.{spec,test}.{js,jsx,ts,tsx}"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/jest/mockTransform.js",
+      "^.+\\.(css|less|scss|sass)$": "<rootDir>/config/jest/mockTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
+      "^.+\\.module\\.(css|sass|scss)$"
+    ],
+    "testEnvironment": "jsdom",
+    "resetMocks": true,
+    "setupFilesAfterEnv": [
+      "<rootDir>/config/jest/setup.js"
+    ]
+  }
+}
