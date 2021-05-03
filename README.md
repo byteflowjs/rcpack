@@ -33,7 +33,8 @@ module.exports = {
 };
 ```
 
-To achieve `format on-save` in VSCode. In root directory, create a folder `.vscode`. Inside, create a file `settings.json`. Write:
+To achieve `format on-save` in VSCode. Make sure you have the VSCode extensions *ESLint* and *Prettier* installed.
+In root directory, create a `.vscode` folder. Inside, create a file `settings.json`. Write:
 ```js
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -42,6 +43,6 @@ To achieve `format on-save` in VSCode. In root directory, create a folder `.vsco
 }
 ```
 
-Make sure you have the VSCode extensions *ESLint* and *Prettier* installed. Now, on file save, VSCode will automatically format your code and lint errors.
+Now, on file save, VSCode will automatically format your code and lint errors.
 
 Additionally, checkout `examples/package.json` to see how to format & lint your code prior to pushing your code to repository.
