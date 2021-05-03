@@ -1,5 +1,5 @@
 {
-  "name": "rcpack",
+  "name": "@byteflowjs/rcpack",
   "version": "1.0.0",
   "description": "A collection of reasonable prettier, eslint RC files for fast-paced JS development.",
   "keywords": [
