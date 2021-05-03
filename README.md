@@ -6,7 +6,12 @@ This package provides a collection of reasonable default prettier, eslint files 
 
 # How to Use
 
-In your `.eslintrc.js` file:
+First, install the package as dev dependency.
+```
+npm i -D @byteflowjs/rcpack
+```
+
+In your `.eslintrc.js` file, write:
 
 ```js
 module.exports = {
@@ -17,7 +22,7 @@ module.exports = {
 };
 ```
 
-In your `.prettierrc.js` file:
+In your `.prettierrc.js` file, write:
 
 ```js
 const prettier = require('@byteflowjs/eslint');

@@ -1,4 +1,6 @@
 module.exports = {
-  extends: [require.resolve('rcpack/eslint')],
-  rules: {},
+  extends: [require.resolve('@byteflowjs/eslint')],
+  rules: {
+    // Your rules here
+  },
 };
