@@ -25,7 +25,7 @@ module.exports = {
 In your `.prettierrc.js` file, write:
 
 ```js
-const prettier = require('@byteflowjs/eslint');
+const prettier = require('@byteflowjs/prettier');
 
 module.exports = {
   ...prettier,

@@ -1,4 +1,4 @@
-const prettier = require('@byteflowjs/eslint');
+const prettier = require('@byteflowjs/prettier');
 
 module.exports = {
   ...prettier,
