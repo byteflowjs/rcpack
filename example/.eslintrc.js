@@ -1,6 +1,4 @@
-const {eslint} = require('rcpack')
-
 module.exports = {
-  extends: [eslint],
+  extends: [require.resolve('rcpack/eslint')],
   rules: {},
 };

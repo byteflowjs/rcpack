@@ -1,4 +1,4 @@
-const {prettier} = require('rcpack')
+const prettier = require('rcpack/prettier')
 
 module.exports = {
   ...prettier,
