@@ -103,6 +103,7 @@
       'no-plusplus': 0,
       'object-shorthand': 0,
       'no-return-await': 0,
+      'func-names': 0,
     },
   
     settings: {

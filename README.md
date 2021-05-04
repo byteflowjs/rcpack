@@ -19,7 +19,11 @@ This installs the package as a dev dependency, and creates the necessary `eslint
 npm i -D @byteflowjs/rcpack && npx rcpack create
 ```
 
-If you want to delete these files.
+Now the rc files are created. You may need to reload VSCode to take effect. 
+
+VSCode will automatically show lint problems on the bottom bar, for all `currently opened tabs` only. To lint all files, `cmd+p`, type `>run task`, choose `eslint: lint whole folder`.
+
+If you want to delete these files in the future.
 ```
 npx rcpack delete
 ```
@@ -64,7 +68,7 @@ To achieve `format on-save` in VSCode. In root directory, create a `.vscode` fol
 }
 ```
 
-We need to reload VSCode to so ESLint and Prettier extensions take effort. `cmd+shift+p` and type `reload window`. 
+We need to reload VSCode to so ESLint and Prettier extensions take effect. `cmd+shift+p` and type `reload window`. 
 
 Now, on file save, VSCode will automatically format your code and lint errors.
 
