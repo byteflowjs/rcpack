@@ -14,12 +14,12 @@ Make sure you have the following VSCode extensions installed:
 
 ## Option 1: Auto-install
 
-This installs the package as a dev dependency, and creates the necessary `eslint` and `prettier` rc files in the root directory automatically for you.
+In your project folder:
 ```
 npm i -D @byteflowjs/rcpack && npx rcpack create
 ```
 
-This will generate the following files:
+This will generate the following files in your project:
 ```
 my-app
 ├── .eslintrc.js
