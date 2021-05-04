@@ -5,13 +5,13 @@
 This package provides a collection of reasonable default prettier, eslint files for fast-paced JS development.
 
 
-# Requirement
+## Requirement
 
 Make sure you have the VSCode extensions *ESLint* and *Prettier* installed.
 
 
 
-# Automatically Install
+## Automatically Install
 
 This installs the package as a dev dependency, and creates the necessary `eslint` and `prettier` rc files in the root directory.
 ```
@@ -24,7 +24,7 @@ npx rcpack delete
 ```
 
 
-# Manually Install
+## Manually Install
 
 Install the package as a dev dependency.
 ```
@@ -68,6 +68,6 @@ We need to reload VSCode to so ESLint and Prettier extensions take effort. `cmd+
 Now, on file save, VSCode will automatically format your code and lint errors.
 
 
-# Format & lint pre-commit
+## Format & lint pre-commit
 
 In `examples/package.json`, check `devDependencies` and `script` section to see an example of how to *format code* & *lint out the errors* prior to pushing your code to repository.
