@@ -21,7 +21,7 @@ In your project folder, run:
 
 This will generate the following files in your project (overwrite existing ones):
 ```
-my-app
+project
 ├── .eslintrc.js
 ├── .eslintignore
 ├── .prettierrc.js
