@@ -16,7 +16,7 @@ Make sure you have the following VSCode extensions installed:
 
 In your project folder:
 ```
-npm i -D @byteflowjs/rcpack && npx rcpack create
+([ ! -e package.json ] && npm init -y); npm i -D @byteflowjs/rcpack && npx rcpack create
 ```
 
 This will generate the following files in your project (overwrite existing ones):
