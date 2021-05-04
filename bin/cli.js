@@ -5,7 +5,6 @@ const Path = require('path')
 
 const run = ([nodePath, scriptPath, ...args]) => {
   const [cmd, ...others] = args
-//   console.log(Path.join(__dirname, '../'))
   const dir = '../example'
   const files = [
     '.vscode/settings.json',
@@ -14,12 +13,14 @@ const run = ([nodePath, scriptPath, ...args]) => {
     '.prettierignore',
     '.prettierrc.js'
   ]
+
   const actions = files.map(file => {
     return {
       from: Path.join(__dirname, dir, file),
-      dest: process.cwd() + '/' + file
+      dest: Path.join(process.cwd(), file),
     }
   })
+
   if (['build', 'create', 'generate', 'gen'].includes(cmd)){
     for (const {from, dest} of actions){
       fs.copySync(from, dest)

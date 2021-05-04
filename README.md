@@ -19,7 +19,18 @@ This installs the package as a dev dependency, and creates the necessary `eslint
 npm i -D @byteflowjs/rcpack && npx rcpack create
 ```
 
-You may need to reload VSCode to take effect.
+This will generate the following files:
+```
+my-app
+├── .eslintrc.js
+├── .eslintignore
+├── .prettierrc.js
+├── .prettierignore
+├── .vscode
+│   └── settings.json
+```
+
+You may need to reload VSCode for extensions to use these configs. 
 
 Now, VSCode automatically shows lint issues for all `currently opened tabs` only (on the bottom bar). To lint all files in the project, in editor:
  >- Hit `cmd+p`
