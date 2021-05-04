@@ -30,9 +30,9 @@ project
 │   └── settings.json
 ```
 
-Now, VSCode will `format your code on save` + `lint out the errors` on the bottom bar. You may need to reload VSCode for the extensions to apply these configs.
+Now, VSCode will `format your code on save` + `show lint issues` on the bottom bar. You may need to reload VSCode for the extensions to apply these configs.
 
-Note, lint issues are shown for all `currently opened tabs` only. To lint all files in the project, in editor:
+Note, lint issues are shown for all `currently opened tabs` only. To lint ALL files in the project, in editor:
  >- Hit `cmd+p`
  >- Type `>run task`
  >- Choose `eslint: lint whole folder`
