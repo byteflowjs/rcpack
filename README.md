@@ -14,7 +14,7 @@ Make sure you have the following VSCode extensions installed:
 
 ## Option 1: Auto-install
 
-In your project folder:
+In your project folder, run:
 ```
 ([ ! -e package.json ] && npm init -y); npm i -D @byteflowjs/rcpack && npx rcpack create
 ```
