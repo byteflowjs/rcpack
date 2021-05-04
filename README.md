@@ -19,11 +19,14 @@ This installs the package as a dev dependency, and creates the necessary `eslint
 npm i -D @byteflowjs/rcpack && npx rcpack create
 ```
 
-Now the rc files are created. You may need to reload VSCode to take effect. 
+You may need to reload VSCode to take effect.
 
-VSCode will automatically show lint problems on the bottom bar, for all `currently opened tabs` only. To lint all files, `cmd+p`, type `>run task`, choose `eslint: lint whole folder`.
+Now, VSCode automatically show lint issues for all `currently opened tabs` only (on the bottom bar). To lint all files, in editor:
+ >- Hit `cmd+p`
+ >- Type `>run task`
+ >- Choose `eslint: lint whole folder`
 
-If you want to delete these files in the future.
+If for some reason, you want to delete these files...
 ```
 npx rcpack delete
 ```
