@@ -2,7 +2,7 @@
 
 # RCPack
 
-This package provides a collection of reasonable default prettier, eslint files for fast-paced JS development.
+This package provides a collection of reasonable default prettier, eslint files for fast-paced JS development. This is especially useful when you need to **unify coding style** across multiple projects.
 
 
 ## Pre-requisite
