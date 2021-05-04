@@ -19,7 +19,7 @@ In your project folder:
 npm i -D @byteflowjs/rcpack && npx rcpack create
 ```
 
-This will generate the following files in your project:
+This will generate the following files in your project (overwrite existing ones):
 ```
 my-app
 ├── .eslintrc.js
