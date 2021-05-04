@@ -5,17 +5,18 @@
 This package provides a collection of reasonable default prettier, eslint files for fast-paced JS development.
 
 
-## Requirement
+## Pre-requisite
 
-Make sure you have the VSCode extensions *ESLint* and *Prettier* installed.
+Make sure you have the following VSCode extensions installed:
+- ESLint
+- Prettier
 
 
+## Option 1: Auto-install
 
-## Automatically Install
-
-This installs the package as a dev dependency, and creates the necessary `eslint` and `prettier` rc files in the root directory.
+This installs the package as a dev dependency, and creates the necessary `eslint` and `prettier` rc files in the root directory automatically for you.
 ```
-npm i -D @byteflowjs/rcpack && npx rcpack generate
+npm i -D @byteflowjs/rcpack && npx rcpack create
 ```
 
 If you want to delete these files.
@@ -24,7 +25,7 @@ npx rcpack delete
 ```
 
 
-## Manually Install
+## Option 2: Manual install
 
 Install the package as a dev dependency.
 ```
