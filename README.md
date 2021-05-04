@@ -21,7 +21,7 @@ npm i -D @byteflowjs/rcpack && npx rcpack create
 
 You may need to reload VSCode to take effect.
 
-Now, VSCode automatically show lint issues for all `currently opened tabs` only (on the bottom bar). To lint all files, in editor:
+Now, VSCode automatically shows lint issues for all `currently opened tabs` only (on the bottom bar). To lint all files, in editor:
  >- Hit `cmd+p`
  >- Type `>run task`
  >- Choose `eslint: lint whole folder`
