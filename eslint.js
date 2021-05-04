@@ -104,6 +104,8 @@
       'object-shorthand': 0,
       'no-return-await': 0,
       'func-names': 0,
+      'camelcase': 0,
+      'no-underscore-dangle': 0,
     },
   
     settings: {

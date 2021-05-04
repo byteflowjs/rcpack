@@ -22,9 +22,9 @@ In your project folder, run:
 This will generate the following files in your project (overwrite existing ones):
 ```
 project
-├── .eslintrc.js
+├── .eslintrc.js --------> Your rules here
+├── .prettierrc.js ------> Your formats here
 ├── .eslintignore
-├── .prettierrc.js
 ├── .prettierignore
 ├── .vscode
 │   └── settings.json
