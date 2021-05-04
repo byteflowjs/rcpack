@@ -10,6 +10,8 @@
       // This also sets the ecmaVersion parser option to 12, so ES12 features are being recognized
       node: true, // Node globals are allowed, ex: global.process
       jest: true,
+      mocha: true,
+      jasmine: true,
     },
   
     // Change default ESLints's parser to Babel's parser. Reason is 
@@ -40,7 +42,7 @@
       'prettier',
     ],
   
-    // A plugin creates additional rules. It also provides some
+    // A plugin creates additional rules. It also provides the
     // config we can apply. We then choose which configs to apply
     // in "extends".
     //  - This property is is merely a flag to enable a given plugin

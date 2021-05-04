@@ -4,9 +4,29 @@
 
 This package provides a collection of reasonable default prettier, eslint files for fast-paced JS development.
 
-# How to Use
 
-First, install the package as dev dependency.
+# Requirement
+
+Make sure you have the VSCode extensions *ESLint* and *Prettier* installed.
+
+
+
+# Automatically Install
+
+This installs the package as a dev dependency, and creates the necessary `eslint` and `prettier` rc files in the root directory.
+```
+npm i -D @byteflowjs/rcpack && npx rcpack generate
+```
+
+If you want to delete these files.
+```
+npx rcpack delete
+```
+
+
+# Manually Install
+
+Install the package as a dev dependency.
 ```
 npm i -D @byteflowjs/rcpack
 ```
@@ -33,13 +53,13 @@ module.exports = {
 };
 ```
 
-To achieve `format on-save` in VSCode. Make sure you have the VSCode extensions *ESLint* and *Prettier* installed.
-Then, in root directory, create a `.vscode` folder. Inside, create a `settings.json` file. Write:
+To achieve `format on-save` in VSCode. In root directory, create a `.vscode` folder. Inside, create a `settings.json` file. Write:
 ```js
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.formatOnPaste": false,
+  "eslint.lintTask.enable": true
 }
 ```
 
@@ -47,4 +67,7 @@ We need to reload VSCode to so ESLint and Prettier extensions take effort. `cmd+
 
 Now, on file save, VSCode will automatically format your code and lint errors.
 
-Additionally, checkout `examples/package.json` to see how to format & lint your code prior to pushing your code to repository.
+
+# Format & lint pre-commit
+
+In `examples/package.json`, check `devDependencies` and `script` section to see an example of how to *format code* & *lint out the errors* prior to pushing your code to repository.
