@@ -1,6 +1,6 @@
 {
   "name": "@byteflowjs/rcpack",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "A collection of reasonable prettier, eslint RC files for fast-paced JS development.",
   "keywords": [
     "eslint",
