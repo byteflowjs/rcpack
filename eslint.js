@@ -65,7 +65,7 @@
       'react/jsx-one-expression-per-line': 0,
       'react-hooks/rules-of-hooks': 'error', // Enforce hooks rules
       'react-hooks/exhaustive-deps': 'warn', // Look out for hooks dependencies
-      // 'import/no-unresolved': 0,
+      'import/no-unresolved': 0,
       'import/order': 0,
       'import/no-named-as-default': 0,
       'import/no-cycle': 0,

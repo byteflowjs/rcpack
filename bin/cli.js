@@ -11,7 +11,8 @@ const run = ([nodePath, scriptPath, ...args]) => {
     '.eslintignore',
     '.eslintrc.js',
     '.prettierignore',
-    '.prettierrc.js'
+    '.prettierrc.js',
+    'jsconfig.json',
   ]
 
   const actions = files.map(file => {
