@@ -106,6 +106,7 @@
       'func-names': 0,
       'camelcase': 0,
       'no-underscore-dangle': 0,
+      'lines-between-class-members': 0,
     },
   
     settings: {
