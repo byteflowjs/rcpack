@@ -107,6 +107,8 @@
       'camelcase': 0,
       'no-underscore-dangle': 0,
       'lines-between-class-members': 0,
+      'class-methods-use-this': 0,
+      'max-classes-per-file': 0,
     },
   
     settings: {
