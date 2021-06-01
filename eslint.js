@@ -109,6 +109,7 @@
       'lines-between-class-members': 0,
       'class-methods-use-this': 0,
       'max-classes-per-file': 0,
+      'yoda': 0,
     },
   
     settings: {
