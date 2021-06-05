@@ -1,6 +1,6 @@
 {
   "name": "@byteflowjs/rcpack",
-  "version": "1.0.30",
+  "version": "1.0.31",
   "description": "A collection of reasonable prettier, eslint RC files for fast-paced JS development.",
   "keywords": [
     "eslint",
@@ -42,5 +42,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/byteflowjs/rcpack"
+  },
+  "devDependencies": {
+    "@rollup/pluginutils": "^4.1.0",
+    "magic-string": "^0.25.7"
   }
 }
