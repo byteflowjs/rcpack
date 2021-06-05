@@ -1,6 +1,6 @@
 {
   "name": "@byteflowjs/rcpack",
-  "version": "1.0.31",
+  "version": "1.0.32",
   "description": "A collection of reasonable prettier, eslint RC files for fast-paced JS development.",
   "keywords": [
     "eslint",
@@ -26,6 +26,7 @@
     "@babel/eslint-parser": "^7.14.2",
     "@babel/preset-env": "^7.14.2",
     "@babel/preset-react": "^7.13.13",
+    "@rollup/pluginutils": "^4.1.0",
     "chalk": "^4.1.1",
     "eslint": "^7.26.0",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -35,6 +36,7 @@
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "fs-extra": "^10.0.0",
+    "magic-string": "^0.25.7",
     "prettier": "^2.3.0"
   },
   "author": "byteflowjs@gmail.com",
@@ -42,9 +44,5 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/byteflowjs/rcpack"
-  },
-  "devDependencies": {
-    "@rollup/pluginutils": "^4.1.0",
-    "magic-string": "^0.25.7"
   }
 }
