@@ -6,3 +6,7 @@ build
 public
 *.local
 .*
+
+# testing
+.nyc_output
+coverage
