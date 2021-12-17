@@ -1,11 +1,10 @@
 /**
  * Rollup plugin to delete React attributes from code
- * 
+ *
  */
 
 const MagicString = require('magic-string');
-const {createFilter} = require('@rollup/pluginutils');
-
+const { createFilter } = require('@rollup/pluginutils');
 
 // Options
 //  - include: [/.*\.js/] --> array of regex specifying files to operate on
@@ -23,7 +22,8 @@ const deleteAttributes = (options = {}) => {
   };
 
   const shouldUse = (id) => {
-    const argsOk = options.removeHtmlAttrs?.length || options.replacement?.length
+    const argsOk =
+      options.removeHtmlAttrs?.length || options.replacement?.length;
     const envOk =
       typeof options.onlyInEnv === 'undefined'
         ? true
@@ -37,7 +37,10 @@ const deleteAttributes = (options = {}) => {
     let found = false; // flag indicating whether any replacement is done
 
     const doReplacement = (patternOrString, replaceWith = '') => {
-      const pattern = patternOrString instanceof RegExp ? patternOrString : new RegExp(patternOrString, 'g')
+      const pattern =
+        patternOrString instanceof RegExp
+          ? patternOrString
+          : new RegExp(patternOrString, 'g');
       let match;
 
       while ((match = pattern.exec(code))) {
@@ -47,24 +50,27 @@ const deleteAttributes = (options = {}) => {
         const end = start + matchedString.length;
         magicString.overwrite(start, end, replaceWith);
       }
-    }
+    };
 
     // remove html attributes
-    if (options.removeHtmlAttrs){
-      doReplacement(new RegExp("(${options.removeHtmlAttrs.join('|')})": ?".*?",?, 'gi'), '');
+    if (options.removeHtmlAttrs) {
+      doReplacement(
+        new RegExp(`"(${options.removeHtmlAttrs.join('|')})": ?".*?",?`, 'gi'),
+        ''
+      );
     }
 
     // replace plain strings
-    if (options.replacement){
-      options.replacement.forEach(obj => {
+    if (options.replacement) {
+      options.replacement.forEach((obj) => {
         doReplacement(obj.from, obj.to);
       });
     }
-    
+
     if (found) {
-      const result = {code: magicString.toString()};
+      const result = { code: magicString.toString() };
       if (isSourceMapEnabled()) {
-        result.map = magicString.generateMap({hires: true});
+        result.map = magicString.generateMap({ hires: true });
       }
       return result;
     } else {
@@ -88,4 +94,4 @@ const deleteAttributes = (options = {}) => {
   };
 };
 
-module.exports = deleteAttributes
+module.exports = deleteAttributes;
