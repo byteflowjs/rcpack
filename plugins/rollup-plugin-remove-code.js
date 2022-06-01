@@ -25,10 +25,10 @@ const { createFilter } = require('@rollup/pluginutils');
 function removeCode({
   startComment = 'remove_code_start',
   endComment = 'remove_code_end',
+  pattern,
   include,
   exclude,
   sourceMap,
-  pattern,
   sourcemap,
 } = {}) {
   const filter = createFilter(include, exclude);
