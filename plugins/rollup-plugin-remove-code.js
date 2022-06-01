@@ -20,14 +20,16 @@ const { createFilter } = require('@rollup/pluginutils');
 //
 // codeThatWillStayInProduction()
 
-// Note, comment must be in /* */. It cannot use //.
+// Note, comment must be in /* */. It cannot use //, except if
+// provide your own regex pattern (that emcompass both start
+// and end delimiter).
 
 function removeCode({
   startComment = 'remove_code_start',
   endComment = 'remove_code_end',
   pattern,
   include,
-  exclude,
+  exclude = [/node_modules/],
   sourceMap,
   sourcemap,
 } = {}) {
@@ -37,26 +39,35 @@ function removeCode({
     return sourceMap !== false && sourcemap !== false;
   };
 
+  const transformCode = (code, id) => {
+    if (!filter(id)) return;
+
+    const defaultPattern = new RegExp(
+      `([\\t ]*\\/\\* ?${startComment} ?\\*\\/)[\\s\\S]*?(\\/\\* ?${endComment} ?\\*\\/[\\t ]*\\n?)`,
+      'g'
+    );
+    const result = {
+      code: code.replace(pattern || defaultPattern, ''),
+    };
+
+    if (isSourceMapEnabled()) {
+      const magicString = new MagicString(result.code);
+      result.map = magicString.generateMap({ hires: true });
+    }
+
+    return result;
+  };
+
   return {
     name: 'removeCode',
 
+    renderChunk(code, chunk) {
+      const id = chunk.fileName;
+      return transformCode(code, id);
+    },
+
     transform(code, id) {
-      if (!filter(id)) return;
-
-      const defaultPattern = new RegExp(
-        `([\\t ]*\\/\\* ?${startComment} ?\\*\\/)[\\s\\S]*?(\\/\\* ?${endComment} ?\\*\\/[\\t ]*\\n?)`,
-        'g'
-      );
-      const result = {
-        code: code.replace(pattern || defaultPattern, ''),
-      };
-
-      if (isSourceMapEnabled()) {
-        const magicString = new MagicString(result.code);
-        result.map = magicString.generateMap({ hires: true });
-      }
-
-      return result;
+      return transformCode(code, id);
     },
   };
 }
